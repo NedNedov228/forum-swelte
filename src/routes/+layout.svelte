@@ -1,23 +1,37 @@
 <script>
-	import './styles.css';
+	import Header from '../components/Header.svelte';
+import './styles.css';
 </script>
 
 <div class="app">
-	
+	<div class="container">	<Header /></div>
+
 	<main>
-		<slot />
+		<div class="container">
+			<slot />
+		</div>
+
+		
 	</main>
 
 	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
+		<p>XeCore inc. 2020-2024 Join our <a href="https://discord.gg/hF8cHaZ7/682RSVnMG6">Discord</a>  </p>
 	</footer>
 </div>
 
 <style>
+
+	
 	.app {
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
+	}
+	
+	.container {
+		width: 100%;
+		max-width: 64rem;
+		margin: 0 auto;
 	}
 
 	main { 
@@ -32,6 +46,7 @@
 	}
 
 	footer {
+		margin-top: 12rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
